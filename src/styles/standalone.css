@@ -1,0 +1,16 @@
+@import "@gsrosa/atlas-ui/theme";
+@import "tailwindcss";
+
+@source "../**/*.{js,ts,jsx,tsx}";
+@source "../../node_modules/@gsrosa/atlas-ui/src/**/*.{js,ts,jsx,tsx}";
+
+html,
+body,
+#root {
+  min-height: 100%;
+  margin: 0;
+}
+
+body {
+  background-color: var(--color-neutral-50);
+}

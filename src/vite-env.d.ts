@@ -1,5 +1,9 @@
 /// <reference types="vite/client" />
 
+declare module '@gsrosa/atlas-ui/styles';
+declare module '@gsrosa/atlas-ui/tokens';
+declare module '@gsrosa/atlas-ui/theme';
+
 interface ImportMetaEnv {
   readonly VITE_API_URL: string;
   readonly VITE_SUPABASE_URL: string;

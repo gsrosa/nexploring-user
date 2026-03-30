@@ -12,11 +12,16 @@ export default defineConfig({
       name: 'userApp',
       filename: 'remoteEntry.js',
       exposes: {
-        './App': './src/App.tsx',
+        './App': './src/bootstrap.tsx',
       },
       shared: {
+        '@gsrosa/atlas-ui': { singleton: true, requiredVersion: false as const },
         react: { singleton: true, requiredVersion: '^19.0.0' },
         'react-dom': { singleton: true, requiredVersion: '^19.0.0' },
+        'lucide-react': {
+          singleton: true,
+          requiredVersion: '^1.7.0',
+        },
       },
     }),
   ],
