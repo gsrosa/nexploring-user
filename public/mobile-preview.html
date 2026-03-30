@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Atlas User — mobile layout (reference)</title>
+    <style>
+      :root {
+        --bg: #0e1117;
+        --card: #181b26;
+        --border: #2a2d3e;
+        --muted: #9295aa;
+        --fg: #f1f2f6;
+        --accent: #ff5722;
+        --accent-soft: rgba(255, 87, 34, 0.18);
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        min-height: 100dvh;
+        font-family:
+          ui-sans-serif,
+          system-ui,
+          -apple-system,
+          Segoe UI,
+          Roboto,
+          sans-serif;
+        background: radial-gradient(ellipse 120% 80% at 50% 0%, #1a1d2e 0%, var(--bg) 55%);
+        color: var(--fg);
+        padding: 2rem 1rem 3rem;
+      }
+      h1 {
+        font-size: 1.125rem;
+        font-weight: 600;
+        text-align: center;
+        margin: 0 0 0.35rem;
+      }
+      p.lead {
+        text-align: center;
+        color: var(--muted);
+        font-size: 0.85rem;
+        max-width: 36rem;
+        margin: 0 auto 2rem;
+        line-height: 1.5;
+      }
+      .stage {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2.5rem;
+        justify-content: center;
+        align-items: flex-start;
+      }
+      .phone {
+        width: min(100%, 360px);
+        aspect-ratio: 9 / 19;
+        border-radius: 2.75rem;
+        padding: 0.65rem;
+        background: linear-gradient(145deg, #2a2d3e, #12141c);
+        box-shadow:
+          0 0 0 1px rgba(255, 255, 255, 0.06),
+          0 24px 60px rgba(0, 0, 0, 0.45);
+      }
+      .phone-inner {
+        height: 100%;
+        border-radius: 2.25rem;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        background: var(--card);
+        border: 1px solid var(--border);
+      }
+      .mobile-top {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.65rem 0.75rem;
+        border-bottom: 1px solid var(--border);
+        background: #141722;
+      }
+      .btn-icon {
+        width: 2.25rem;
+        height: 2.25rem;
+        border-radius: 0.5rem;
+        border: 1px solid var(--border);
+        background: #1c1f2a;
+        flex-shrink: 0;
+      }
+      .mobile-title {
+        flex: 1;
+        text-align: center;
+      }
+      .mobile-title span {
+        display: block;
+        font-size: 0.65rem;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: var(--muted);
+      }
+      .mobile-title strong {
+        font-size: 0.8rem;
+        font-weight: 600;
+      }
+      .spacer {
+        width: 2.25rem;
+        flex-shrink: 0;
+      }
+      .mobile-body {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        min-height: 0;
+      }
+      .content {
+        flex: 1;
+        padding: 1rem 1rem 1.25rem;
+        overflow: auto;
+      }
+      .content h2 {
+        margin: 0 0 0.25rem;
+        font-size: 1.35rem;
+        font-weight: 600;
+      }
+      .content .sub {
+        margin: 0 0 1rem;
+        font-size: 0.75rem;
+        color: var(--muted);
+      }
+      .avatar-row {
+        display: flex;
+        gap: 0.75rem;
+        align-items: center;
+        margin-bottom: 1rem;
+      }
+      .avatar {
+        width: 3.25rem;
+        height: 3.25rem;
+        border-radius: 999px;
+        background: var(--accent-soft);
+        border: 1px solid var(--border);
+      }
+      .field {
+        height: 2.25rem;
+        border-radius: 0.5rem;
+        background: #1c1f2a;
+        border: 1px solid var(--border);
+        margin-bottom: 0.5rem;
+      }
+      .legend {
+        max-width: 22rem;
+        font-size: 0.8rem;
+        color: var(--muted);
+        line-height: 1.55;
+      }
+      .legend code {
+        font-size: 0.72rem;
+        padding: 0.12rem 0.35rem;
+        border-radius: 0.35rem;
+        background: rgba(255, 255, 255, 0.06);
+      }
+      .drawer-hint {
+        margin-top: 1.5rem;
+        padding: 0.75rem 1rem;
+        border-radius: 0.75rem;
+        border: 1px dashed var(--border);
+        font-size: 0.75rem;
+        color: var(--muted);
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Atlas User — mobile layout reference</h1>
+    <p class="lead">
+      Single centered card: top bar (menu + current section) and scrollable content. The account menu opens as a
+      left sheet over a dimmed backdrop — same structure as the live MFE.
+    </p>
+    <div class="stage">
+      <div>
+        <div class="phone" aria-label="Phone frame mockup">
+          <div class="phone-inner">
+            <div class="mobile-top">
+              <div class="btn-icon" title="Menu"></div>
+              <div class="mobile-title">
+                <span>Account</span>
+                <strong>Profile</strong>
+              </div>
+              <div class="spacer"></div>
+            </div>
+            <div class="mobile-body">
+              <div class="content">
+                <h2>Profile</h2>
+                <p class="sub">Manage your personal information</p>
+                <div class="avatar-row">
+                  <div class="avatar"></div>
+                  <div style="flex: 1">
+                    <div class="field" style="max-width: 8rem; margin-bottom: 0.35rem"></div>
+                    <div class="field" style="max-width: 11rem; height: 0.65rem; opacity: 0.5"></div>
+                  </div>
+                </div>
+                <div class="field"></div>
+                <div class="field"></div>
+                <div class="field" style="height: 4rem"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="drawer-hint">Menu opens from the left · backdrop closes on tap</div>
+      </div>
+      <div class="legend">
+        <p><strong>Desktop</strong> (not shown): the same card is centered with <code>max-width: 64rem</code>; the sidebar stays visible beside the content inside the card.</p>
+        <p style="margin-top: 0.75rem">
+          Open the real app at <code>/</code> when <code>pnpm dev</code> is running — this page is only a static wireframe.
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
