@@ -1,6 +1,6 @@
 import { SlidersHorizontalIcon } from 'lucide-react';
 
-import { AccountSectionHeader } from '../components/account-section-header';
+import { AccountSectionHeader } from './account-section-header';
 
 export function PreferencesPage() {
   return (

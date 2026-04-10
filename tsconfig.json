@@ -17,7 +17,8 @@
     "noFallthroughCasesInSwitch": true,
     "baseUrl": ".",
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": ["./src/*"],
+      "atlas-bff/trpc": ["../atlas-bff/types-generated/trpc/export-types.d.ts"]
     }
   },
   "include": ["src"]

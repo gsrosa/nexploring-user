@@ -3,11 +3,11 @@ import React from 'react';
 import { ACCOUNT_SECTION_LABELS, type AccountSectionId } from './account-section';
 import { AccountMobileBar, AccountSidebar } from './components/account-sidebar';
 import { AccountShell } from './components/account-shell';
-import { PasswordPage } from './pages/password-page';
-import { PaymentsPage } from './pages/payments-page';
-import { PlansPage } from './pages/plans-page';
-import { PreferencesPage } from './pages/preferences-page';
-import { ProfilePage } from './pages/profile-page';
+import { PasswordPage } from './components/password-page';
+import { PaymentsPage } from './components/payments-page';
+import { PlansPage } from './components/plans-page';
+import { PreferencesPage } from './components/preferences-page';
+import { ProfilePage } from './components/profile-page';
 
 function AccountSectionContent({ section }: { section: AccountSectionId }) {
   switch (section) {

@@ -2,7 +2,7 @@ import { Button } from '@gsrosa/atlas-ui';
 import { CreditCardIcon, PlusIcon, SparklesIcon } from 'lucide-react';
 import { toast } from 'sonner';
 
-import { AccountSectionHeader } from '../components/account-section-header';
+import { AccountSectionHeader } from './account-section-header';
 
 const MOCK_CREDITS = 12;
 
