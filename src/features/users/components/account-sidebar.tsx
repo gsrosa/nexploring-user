@@ -1,4 +1,4 @@
-import { CreditCardIcon, LockIcon, MapIcon, MenuIcon, SlidersHorizontalIcon, UserIcon } from 'lucide-react';
+import { CreditCardIcon, LockIcon, MenuIcon, SlidersHorizontalIcon, UserIcon } from 'lucide-react';
 
 import type { AccountSectionId } from '../account-section';
 
@@ -6,7 +6,6 @@ const items: { id: AccountSectionId; title: string; icon: typeof UserIcon }[] = 
   { id: 'profile', title: 'Profile', icon: UserIcon },
   { id: 'password', title: 'Password', icon: LockIcon },
   { id: 'payments', title: 'Payments', icon: CreditCardIcon },
-  { id: 'plans', title: 'My Plans', icon: MapIcon },
   { id: 'preferences', title: 'Preferences', icon: SlidersHorizontalIcon },
 ];
 

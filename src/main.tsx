@@ -1,5 +1,4 @@
 import { AtlasProvider } from '@gsrosa/atlas-ui';
-import '@gsrosa/atlas-ui/styles';
 import '@/styles/standalone.css';
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';

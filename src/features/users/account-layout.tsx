@@ -5,7 +5,6 @@ import { AccountMobileBar, AccountSidebar } from './components/account-sidebar';
 import { AccountShell } from './components/account-shell';
 import { PasswordPage } from './components/password-page';
 import { PaymentsPage } from './components/payments-page';
-import { PlansPage } from './components/plans-page';
 import { PreferencesPage } from './components/preferences-page';
 import { ProfilePage } from './components/profile-page';
 
@@ -17,8 +16,6 @@ function AccountSectionContent({ section }: { section: AccountSectionId }) {
       return <PasswordPage />;
     case 'payments':
       return <PaymentsPage />;
-    case 'plans':
-      return <PlansPage />;
     case 'preferences':
       return <PreferencesPage />;
     default:
@@ -26,9 +23,14 @@ function AccountSectionContent({ section }: { section: AccountSectionId }) {
   }
 }
 
-export function AccountLayout() {
+interface AccountLayoutProps {
+  /** When opening `/profile/settings` from shell, start on travel preferences. */
+  initialSection?: AccountSectionId;
+}
+
+export function AccountLayout({ initialSection = 'profile' }: AccountLayoutProps) {
   const [navOpen, setNavOpen] = React.useState(false);
-  const [activeSection, setActiveSection] = React.useState<AccountSectionId>('profile');
+  const [activeSection, setActiveSection] = React.useState<AccountSectionId>(initialSection);
 
   return (
     <AccountShell>

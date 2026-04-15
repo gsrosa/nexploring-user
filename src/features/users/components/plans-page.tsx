@@ -23,7 +23,7 @@ export function PlansPage() {
   }
 
   function handleOpenPlan(id: string) {
-    window.location.assign(`/trips/${id}`);
+    window.location.assign(`/my-trips/${id}`);
   }
 
   return (

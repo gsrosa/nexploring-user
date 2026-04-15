@@ -576,7 +576,7 @@ export function TripDetailPage({ tripId }: { tripId: string }) {
       <AccountShell>
         <div className="flex min-h-[60dvh] flex-col items-center justify-center gap-4 text-center">
           <p className="text-sm text-[var(--atlas-surface-foreground)]">Trip not found.</p>
-          <button type="button" onClick={() => window.location.assign('/trips')} className="text-sm text-[var(--atlas-color-primary-400)] hover:underline">
+          <button type="button" onClick={() => window.location.assign('/my-trips')} className="text-sm text-[var(--atlas-color-primary-400)] hover:underline">
             ← Back to plans
           </button>
         </div>
@@ -607,7 +607,7 @@ export function TripDetailPage({ tripId }: { tripId: string }) {
       <div className={`account-fade-in-up mx-auto w-full px-4 py-8 sm:px-6 ${isEditOpen ? 'max-w-6xl' : 'max-w-2xl'}`}>
         {/* Header */}
         <div className="mb-8 flex items-start justify-between gap-4">
-          <button type="button" onClick={() => window.location.assign('/trips')} className="mt-1 flex items-center gap-1 text-sm text-[var(--atlas-surface-muted-foreground)] transition-colors hover:text-[var(--atlas-surface-foreground)]">
+          <button type="button" onClick={() => window.location.assign('/my-trips')} className="mt-1 flex items-center gap-1 text-sm text-[var(--atlas-surface-muted-foreground)] transition-colors hover:text-[var(--atlas-surface-foreground)]">
             <ArrowLeftIcon className="size-4" aria-hidden />
             My plans
           </button>

@@ -1,5 +1,6 @@
 import { Toaster } from 'sonner';
 
+import { TravelerOnboardingPage } from './features/traveler-profile/traveler-onboarding-page';
 import { AccountLayout } from './features/users/account-layout';
 import { TripDetailPage } from './features/users/components/trip-detail-page';
 import { TripsListPage } from './features/users/components/trips-list-page';
@@ -11,16 +12,17 @@ import { TrpcProvider } from './providers/trpc-provider';
 type View =
   | { type: 'detail'; tripId: string }
   | { type: 'list' }
-  | { type: 'account' };
-
-const ACCOUNT_SUBPATHS = /^\/trips\/(account|profile|settings|preferences|password|payments)/;
+  | { type: 'account' }
+  | { type: 'traveler-onboarding' }
+  | { type: 'traveler-settings' };
 
 function resolveView(): View {
   const path = window.location.pathname;
-  if (ACCOUNT_SUBPATHS.test(path)) return { type: 'account' };
-  const idMatch = /^\/trips\/([\w-]+)$/.exec(path);
+  if (/^\/profile\/onboarding\/?$/.test(path)) return { type: 'traveler-onboarding' };
+  if (path === '/profile' || /^\/profile\/settings\/?$/.test(path)) return { type: 'traveler-settings' };
+  if (/^\/my-trips\/?$/.test(path)) return { type: 'list' };
+  const idMatch = /^\/my-trips\/([\w-]+)$/.exec(path);
   if (idMatch?.[1]) return { type: 'detail', tripId: idMatch[1] };
-  if (/^\/trips\/?$/.test(path)) return { type: 'list' };
   return { type: 'account' };
 }
 
@@ -33,6 +35,8 @@ export default function App() {
         <div className="flex min-h-0 flex-1 flex-col">
           {view.type === 'detail' && <TripDetailPage tripId={view.tripId} />}
           {view.type === 'list' && <TripsListPage />}
+          {view.type === 'traveler-onboarding' && <TravelerOnboardingPage />}
+          {view.type === 'traveler-settings' && <AccountLayout initialSection="preferences" />}
           {view.type === 'account' && <AccountLayout />}
         </div>
         <Toaster richColors position="top-center" theme="dark" />

@@ -136,7 +136,7 @@ export function TripsListPage() {
                 <li key={plan.id}>
                   <button
                     type="button"
-                    onClick={() => window.location.assign(`/trips/${plan.id}`)}
+                    onClick={() => window.location.assign(`/my-trips/${plan.id}`)}
                     className="group flex w-full items-center gap-4 rounded-2xl border border-[var(--atlas-surface-border)] bg-[var(--atlas-surface-background)] p-5 text-left transition-colors hover:bg-[var(--atlas-surface-container-high)]"
                   >
                     {/* Icon */}

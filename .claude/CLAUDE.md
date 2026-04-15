@@ -31,6 +31,7 @@ See `.ai/README.md` for the full overview. Key sections:
 - `.ai/rules/api.md` — tRPC client usage
 - `.ai/rules/styling.md` — tokens, CVA, cn() usage
 - `.ai/rules/testing.md` — testing conventions
+- `.ai/rules/skeletons.md` — skeleton required for every page and MFE
 
 ### Architecture Decisions — read when touching affected areas
 - `.ai/decisions/index.md` — table of all ADRs
