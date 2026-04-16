@@ -11,3 +11,7 @@ dist-ssr/
 
 # TypeScript
 tsconfig.tsbuildinfo
+
+playwright-report/
+test-results/
+playwright-mcp/
