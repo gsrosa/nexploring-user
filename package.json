@@ -3,7 +3,6 @@
   "private": true,
   "version": "0.1.0",
   "scripts": {
-    "build:nexploring-ui": "npm run build --prefix ../nexploring-ui",
     "prepare": "husky",
     "dev": "webpack serve --mode development",
     "generate:trpc": "tsx scripts/generate-trpc.ts",
@@ -27,7 +26,6 @@
     "i18next": "^26.0.5",
     "i18next-http-backend": "^3.0.4",
     "lucide-react": "^1.7.0",
-    "nexploring-bff": "file:../nexploring-bff",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
     "react-hook-form": "^7.72.1",
