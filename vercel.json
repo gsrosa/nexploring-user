@@ -1,3 +1,3 @@
 {
-  "installCommand": "printf '//npm.pkg.github.com/:_authToken=%s\\n' \"$NPM_TOKEN\" >> .npmrc && pnpm install --frozen-lockfile"
+  "installCommand": "printf '@gsrosa:registry=https://npm.pkg.github.com/\\n' > .npmrc && printf '//npm.pkg.github.com/:_authToken=%s\\n' \"$NPM_TOKEN\" >> .npmrc && pnpm install --frozen-lockfile"
 }
