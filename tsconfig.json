@@ -22,11 +22,5 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": [
-    "src",
-    "**/*.test.ts",
-    "**/*.test.tsx",
-    "**/*.spec.ts",
-    "**/*.spec.tsx"
-  ]
+  "include": ["src"]
 }
