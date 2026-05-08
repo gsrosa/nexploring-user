@@ -5,7 +5,6 @@ import { UserPreferencesPage } from '@/features/user-preferences';
 import { TrpcProvider } from '@/providers/trpc-provider';
 
 import '@/lib/i18n';
-import '@/styles/federation.css';
 
 const UserPreferencesBootstrap = () => {
   return (

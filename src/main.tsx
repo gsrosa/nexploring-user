@@ -12,7 +12,7 @@ import '@/lib/i18n';
 const root = document.getElementById('root');
 if (root) {
   const appTree =
-    import.meta.env.VITE_PLAYWRIGHT === '1' ? <PlaywrightRoot /> : <App />;
+    process.env.NEXT_PUBLIC_PLAYWRIGHT === '1' ? <PlaywrightRoot /> : <App />;
 
   createRoot(root).render(
     <React.StrictMode>

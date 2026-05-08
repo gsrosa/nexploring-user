@@ -1,7 +1,6 @@
 import { UserPreferencesFormPageSkeleton } from '@/features/user-preferences/components/user-preferences-form-page-skeleton';
 import { UserPreferencesSettingsPageSkeleton } from '@/features/user-preferences/components/user-preferences-settings-page-skeleton';
 
-import '@/styles/federation.css';
 
 const resolveRoute = (p: string) => {
   if (/^\/profile\/onboarding\/?$/.test(p)) return 'onboarding';

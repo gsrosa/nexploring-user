@@ -17,3 +17,6 @@ test-results/
 playwright-mcp/
 .vercel
 .env*.local
+
+.next
+.vercel

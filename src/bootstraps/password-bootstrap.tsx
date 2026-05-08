@@ -5,7 +5,6 @@ import { PasswordPage } from '@/features/password';
 import { TrpcProvider } from '@/providers/trpc-provider';
 
 import '@/lib/i18n';
-import '@/styles/federation.css';
 
 const PasswordBootstrap = () => {
   return (

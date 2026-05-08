@@ -1,6 +1,0 @@
-/* Federation mode: user utilities + custom user CSS.
-   Imports tailwindcss/theme for default spacing/breakpoints. Skips preflight. */
-@import "tailwindcss";
-@import "@gsrosa/nexploring-ui/theme";
-
-@source "../**/*.{js,ts,jsx,tsx}";

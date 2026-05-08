@@ -5,7 +5,6 @@ import { ProfilePage } from '@/features/profile';
 import { TrpcProvider } from '@/providers/trpc-provider';
 
 import '@/lib/i18n';
-import '@/styles/federation.css';
 
 const ProfileBootstrap = () => {
   return (

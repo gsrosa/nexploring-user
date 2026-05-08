@@ -1,51 +1,11 @@
-@import "@gsrosa/nexploring-ui/styles";
+@import "@gsrosa/nexploring-ui/styles/base";
+@import "@gsrosa/nexploring-ui/theme";
 @import "tailwindcss";
 
 @source "../**/*.{js,ts,jsx,tsx}";
+@source "../../node_modules/@gsrosa/nexploring-ui/dist/nexploring-ui.js";
 
 @theme {
-  /* ── DS tokens ─────────────────────────────────────────────── */
-  --color-primary-50:  #fff5f2;
-  --color-primary-100: #ffe8e0;
-  --color-primary-200: #ffd0c2;
-  --color-primary-300: #ffb5a0;
-  --color-primary-400: #ff8f73;
-  --color-primary-500: #ff5722;
-  --color-primary-600: #e64a19;
-  --color-primary-700: #c43e10;
-  --color-primary-800: #9e2f08;
-  --color-primary-900: #7a1f04;
-  --color-auxiliary-50:  #f0fdff;
-  --color-auxiliary-100: #d4f8ff;
-  --color-auxiliary-200: #bdf4ff;
-  --color-auxiliary-300: #7ee8fc;
-  --color-auxiliary-400: #4dd4e8;
-  --color-auxiliary-500: #26c6da;
-  --color-auxiliary-600: #00838f;
-  --color-auxiliary-700: #00363d;
-  --color-auxiliary-800: #002529;
-  --color-auxiliary-900: #001417;
-  --color-neutral-0:    #ffffff;
-  --color-neutral-50:   #f8f9fc;
-  --color-neutral-100:  #f1f2f6;
-  --color-neutral-200:  #e2e4ec;
-  --color-neutral-300:  #c8cad6;
-  --color-neutral-400:  #9295aa;
-  --color-neutral-500:  #6d6f7e;
-  --color-neutral-600:  #4a4c58;
-  --color-neutral-700:  #333336;
-  --color-neutral-800:  #282829;
-  --color-neutral-900:  #1e1e1e;
-  --color-neutral-1000: #000000;
-  --color-success-500: #22c55e;
-  --color-warning-500: #f59e0b;
-  --color-danger-500:  #f43f5e;
-  --color-info-500:    #3b82f6;
-  --font-sans:    "Manrope", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  --font-display: "Noto Serif", ui-serif, Georgia, "Times New Roman", serif;
-  --font-mono:    "JetBrains Mono", "Fira Code", monospace;
-
-  /* ── App-specific animations ───────────────────────────────── */
   --animate-account-fade-in-up: account-fade-in-up 0.45s ease both;
   @keyframes account-fade-in-up {
     from {
