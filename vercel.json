@@ -1,4 +1,4 @@
 {
   "installCommand": "echo \"@gsrosa:registry=https://npm.pkg.github.com/\" > .npmrc && echo \"//npm.pkg.github.com/:_authToken=$GITHUB_TOKEN\" >> .npmrc && cat .npmrc && pnpm install --no-frozen-lockfile",
-  "outputDirectory": "dist"
+  "outputDirectory": ".next"
 }
